@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Background Remover | AI-Powered Editing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="theme-toggle" id="theme-toggle">🌙</button>
+        
+        <div class="header">
+            <h1>AI Background Remover</h1>
+            <p>Upload an image to remove background instantly</p>
+        </div>
+
+        <div class="upload-container" id="drop-zone">
+            <h2>Drag & Drop Image</h2>
+            <p>or click to select file</p>
+            <input type="file" id="file-input" hidden accept="image/*">
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <div id="preview-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img id="original-image" alt="Original">
+            </div>
+            <div class="image-box">
+                <h3>Result</h3>
+                <img id="result-image" alt="Result">
+            </div>
+        </div>
+
+        <div class="controls" id="controls">
+            <button id="remove-bg">Remove Background</button>
+        </div>
+
+        <div class="download-section" id="download-section">
+            <button onclick="downloadResult()">Download Result</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
